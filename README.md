@@ -1,10 +1,15 @@
-require nodeJs 
-Becuse a step for run project
-Open CLI
+# User manual and test this service
+## Installation
+## what it needs
+* nodeJs version 16.13^
+
+1. Install nodeJs
+2. Rename file .env.example to .env
+3. Open cli for run command
 ```
 npm i
 ```
-Then install package successfuly. run code in the cli
 ```
 node main-server.js
 ```
+4. Have a good test
