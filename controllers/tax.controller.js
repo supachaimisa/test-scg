@@ -11,8 +11,5 @@ const Tax = {
     });
     res.send(_res);
   },
-  // calTaxPerson: (req, res) => {
-  //   const body = req.body;
-  // },
 };
 module.exports = Tax;
