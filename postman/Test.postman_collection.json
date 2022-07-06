@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "9cf5f9c4-d5c8-4ae8-8ec4-40c14c46117f",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13652250"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user/gettoken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pass\": \"mrpresident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/gettoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"gettoken"
+					]
+				},
+				"description": "get token for use anothers api"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/contacts/getlistall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoibXJwcmVzaWRlbnQiLCJpYXQiOjE2NTcxMjM1MDksImV4cCI6MTY1OTcxNTUwOX0.wEX5tb3ChchXv-dUp3F-L1fOPl-LOfg85Rk1I3_8P3A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/contacts/getlistall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"getlistall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/contacts/addgroup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoibXJwcmVzaWRlbnQiLCJpYXQiOjE2NTcxMjM1MDksImV4cCI6MTY1OTcxNTUwOX0.wEX5tb3ChchXv-dUp3F-L1fOPl-LOfg85Rk1I3_8P3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contacts/addgroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"addgroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/contacts/addcontact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoibXJwcmVzaWRlbnQiLCJpYXQiOjE2NTcxMjM1MDksImV4cCI6MTY1OTcxNTUwOX0.wEX5tb3ChchXv-dUp3F-L1fOPl-LOfg85Rk1I3_8P3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupId\": 1,\r\n    \"newContact\": {\r\n            \"firstName\": \"Brother\",\r\n            \"lastName\": \"\",\r\n            \"brithDate\": \"\",\r\n            \"phone\": \"084-564-4568\",\r\n            \"url\": \"\"\r\n          }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contacts/addcontact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"addcontact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/contacts/getcontactbygroup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoibXJwcmVzaWRlbnQiLCJpYXQiOjE2NTcxMjM1MDksImV4cCI6MTY1OTcxNTUwOX0.wEX5tb3ChchXv-dUp3F-L1fOPl-LOfg85Rk1I3_8P3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contacts/getcontactbygroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"getcontactbygroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sendmail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoibXJwcmVzaWRlbnQiLCJpYXQiOjE2NTcxMjM1MDksImV4cCI6MTY1OTcxNTUwOX0.wEX5tb3ChchXv-dUp3F-L1fOPl-LOfg85Rk1I3_8P3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"supachaimisa@gmail.com\",\r\n    \"subject\": \"Test scg urbran 06/07/2565 23.18\",\r\n    \"message\": \"Hello my name is Ton. How are you ?\",\r\n    \"templateID\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sendmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sendmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/tax/caltaxperson",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoibXJwcmVzaWRlbnQiLCJpYXQiOjE2NTcxMjM1MDksImV4cCI6MTY1OTcxNTUwOX0.wEX5tb3ChchXv-dUp3F-L1fOPl-LOfg85Rk1I3_8P3A",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personnels\":[\r\n     { \"id\": 1, \"name\": \"mac\", \"income\": 1000000 },\r\n     { \"id\": 2, \"name\": \"ton\", \"income\": 360000 },\r\n     { \"id\": 3, \"name\": \"bank\", \"income\": 502000 }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tax/caltaxperson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tax",
+						"caltaxperson"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
