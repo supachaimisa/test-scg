@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { sendMail } = require('../controllers/sendMail.controller')
+const { sendMail } = require('../controllers/mail.controller')
 const { verifyToken } = require("../service/auth.service")
 router.post('/', verifyToken, sendMail)
 

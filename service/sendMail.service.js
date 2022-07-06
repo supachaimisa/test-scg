@@ -46,4 +46,4 @@ const sendMailService = (mailContent) => {
       }
     });
   }
-module.exports = sendMailService;
+module.exports.sendMailService = sendMailService;

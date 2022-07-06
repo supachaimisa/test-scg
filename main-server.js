@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
 })
 
 app.use('/user', require('./routes/user.route'))
-app.use('/sendmail', require('./routes/sendMail.route'));
+app.use('/sendmail', require('./routes/mail.route'));
 app.use('/contacts', require('./routes/contacts.route'));
-app.use('/tax', require('./routes/sendMail.route'));
+app.use('/tax', require('./routes/tax.route'));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

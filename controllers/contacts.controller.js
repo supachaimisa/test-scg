@@ -1,6 +1,6 @@
 const { ContactsModel } = require("../models/contacts.model");
 const contactModel = new ContactsModel();
-const contactsController = {
+const ContactsController = {
   getListAll: (req,res) => {
     res.send(contactModel.getContacts());
   },
@@ -17,4 +17,4 @@ const contactsController = {
     res.send(contactModel.getContactByGroup(body.groupId))
   }
 };
-module.exports = contactsController;
+module.exports = ContactsController;

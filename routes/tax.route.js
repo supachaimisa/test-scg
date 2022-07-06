@@ -1,8 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const { getToken } = require("../service/auth.service")
-router.post('/caltaxperson',(req,res)=>{
-    const body = req.body
-    res.send(getToken(body.pass))
-})
+const { calTaxPersons } = require("../controllers/tax.controller")
+const { verifyToken } = require("../service/auth.service")
+router.post('/caltaxperson', verifyToken, calTaxPersons)
 module.exports = router
