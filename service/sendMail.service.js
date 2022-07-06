@@ -3,8 +3,7 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 const handlebars = require('handlebars');
 require('dotenv').config()
-const sendMailService = {
-  sendMailTo: (mailContent) => {
+const sendMailService = (mailContent) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -46,6 +45,5 @@ const sendMailService = {
         console.log("Email sent: " + info.response);
       }
     });
-  },
-};
+  }
 module.exports = sendMailService;

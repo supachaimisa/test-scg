@@ -1,4 +1,4 @@
-require NodeJs 
+require nodeJs 
 Becuse a step for run project
 Open CLI
 ```

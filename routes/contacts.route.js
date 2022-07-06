@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const contactsController = require('../controllers/contacts.controller')
-
-router.get('/getlistall', contactsController.getListAll)
-router.post('/addgroup', contactsController.addGroup)
-router.post('/addcontact', contactsController.addContact)
-router.post('/getcontactbygroup', contactsController.getContactByGroup)
+const { getListAll, addGroup, addContact, getContactByGroup } = require('../controllers/contacts.controller')
+const { verifyToken } = require("../service/auth.service")
+router.get('/getlistall', verifyToken, getListAll)
+router.post('/addgroup', verifyToken, addGroup)
+router.post('/addcontact', verifyToken, addContact)
+router.post('/getcontactbygroup', verifyToken, getContactByGroup)
 
 module.exports = router

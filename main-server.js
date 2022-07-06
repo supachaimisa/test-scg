@@ -9,8 +9,10 @@ app.get('/', (req, res) => {
   res.send('test-scg')
 })
 
-app.use('/contacts', require('./routes/contacts.route'));
+app.use('/user', require('./routes/user.route'))
 app.use('/sendmail', require('./routes/sendMail.route'));
+app.use('/contacts', require('./routes/contacts.route'));
+app.use('/tax', require('./routes/sendMail.route'));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
