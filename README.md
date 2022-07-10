@@ -5,7 +5,7 @@
 
 1. Install nodeJs
 2. Rename file .env.example to .env
-3. Open cli for run command
+3. Open terminal for run command
 ```
 npm i
 ```
